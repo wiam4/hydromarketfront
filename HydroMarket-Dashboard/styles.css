@@ -1,0 +1,133 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    min-height: 100vh; /* Prend au moins toute la hauteur de l'écran */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li.active, .sidebar li:hover {
+    background: #aaa;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Stat Cards */
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+/* Marketplace */
+.marketplace {
+    margin-top: 20px;
+}
+
+.market-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.market-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.start-btn {
+    background: white;
+    border: 2px solid #28a745;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Recent Orders */
+.orders {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.delivered {
+    color: green;
+}
+
+.canceled {
+    color: red;
+}
+.market-card canvas {
+    width: 100%;
+    height: 200px;
+}
+.market-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.market-card canvas {
+    width: 100% !important;  /* Ajuste automatiquement à la largeur du parent */
+    max-width: 300px; /* Taille max du graphique */
+    height: 150px !important; /* Hauteur réduite */
+}
