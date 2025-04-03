@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HydroMarket - Solar Panels</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header>
+    <strong>HydroMarket</strong>
+    <nav>
+      <a href="../hydroMarket/main page.html">Home</a>
+      <a href="#">Collections</a>
+      <a href="../shop template/shop template.html">Shop</a>
+      <a href="#">About us</a>
+      <a href="#">Contact us</a>
+    </nav>
+    <div class="profil-pic">
+      <img src="./Images/vault_boy.jpg" >
+      <div class="profil-dropdown" onclick="toggleDropdown()">˅</div>
+      <div class="dropdown-menu" id="profileDropdown">
+        <a href="../HydroMarket-Dashboard/dashboard.html">Profile</a>
+        <a href="#">Orders</a>
+        <a href="#">Settings</a>
+        <div class="divider"></div>
+        <a href="#">Logout</a>
+      </div> 
+    </div>
+  </header>
+
+  <div class="search-bar">
+    <img src="./Images/magnaGlass.png" >
+    <input type="text" value="Solar panel" />
+    <select>
+      <option>All Categories</option>
+    </select>
+    <button>Search</button>
+  </div>
+
+  <div class="filters">
+    <div>Proximity</div>
+    <div>Price</div>
+    <div>Rating</div>
+    <div>Recency</div>
+  </div>
+
+  <div class="product-list">
+    <div class="product-card">
+      <img src="./Images/solarPanel.png" alt="ECO-WORTHY Solar Panel Kit" />
+      <div class="product-info">
+        <div class="product-title">ECO-WORTHY 200 Watts 12 Volt/24 Volt Solar Panel Kit...</div>
+        <div class="rating">★★★★★ 1,149</div>
+        <div class="price">1890 MAD</div>
+        <div class="delivery">Delivery <strong>Thu, Apr 3</strong><br/>Ships to Morocco</div>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="./Images/portablePanel.png" alt="Renogy Portable Solar Panel" />
+      <div class="product-info">
+        <div class="product-title">Renogy 200W Portable Solar Panel, IP65 Waterproof...</div>
+        <div class="rating">★★★★☆ 264</div>
+        <div class="price">1820 MAD</div>
+        <div class="delivery">Delivery <strong>Thu, Apr 3</strong><br/>Ships to Morocco</div>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-toggle-btn" onclick="openMap()">Open Map</div>
+
+  <div class="map-drawer" id="mapDrawer">
+    <div class="close-map-btn" onclick="closeMap()">Close Map</div>
+    <iframe 
+      src="https://www.google.com/maps?q=33.601158,-7.629792&hl=es;z=14&output=embed"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+</body>
+</html>

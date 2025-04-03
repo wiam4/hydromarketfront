@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroMarket Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+
+</head>
+<body>
+    <header>
+        <strong>HydroMarket</strong>
+        <nav>
+          <a href="../hydroMarket/main page.html">Home</a>
+          <a href="#">Collections</a>
+          <a href="../shop template/shop template.html">Shop</a>
+          <a href="#">About us</a>
+          <a href="#">Contact us</a>
+        </nav>
+        <div class="profil-pic">
+          <img src="./Images/vault_boy.jpg" >
+          <div class="profil-dropdown" onclick="toggleDropdown()">˅</div>
+          <div class="dropdown-menu" id="profileDropdown">
+            <a href="../HydroMarket-Dashboard/dashboard.html">Profile</a>
+            <a href="../seller homepage/seller homepage.html">Orders</a>
+            <a href="#">Settings</a>
+            <div class="divider"></div>
+            <a href="#">Logout</a>
+          </div> 
+        </div>
+      </header>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>HydroMarket</h2>
+            <ul>
+                <li class="active"><i class="icon">📋</i> Summary</li>
+                <li><i class="icon">💰</i> Transactions</li>
+                <li><i class="icon">📊</i> Statistics</li>
+                <li><i class="icon">🛍️</i> Products</li>
+                <li><i class="icon">👤</i> Sellers</li>
+                <li><i class="icon">📂</i> Categories</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div>
+                <h1>HydroMarket Dashboard</h1>
+                <div class="header-icons">
+                    <button class="search-btn">🔍</button>
+                    <button class="calendar-btn">📅</button>
+                </div>
+            </div>
+
+            <!-- Stat Cards -->
+            <section class="stats">
+                <div class="card">
+                    <h3>Customers</h3>
+                    <p>5,896</p>
+                </div>
+                <div class="card">
+                    <h3>Income</h3>
+                    <p>100,098 MAD</p>
+                </div>
+                <div class="card">
+                    <h3>Products Sold</h3>
+                    <p>89,878</p>
+                </div>
+            </section>
+
+            <!-- Marketplace Section -->
+            <section class="marketplace">
+                <h2>Marketplace</h2>
+                <div class="market-cards">
+                    <div class="market-card">
+                        <h3>Data Analytics Overview</h3>
+                        <p>See how your account grows and how you can boost it.</p>
+                        <button class="start-btn">START</button>
+                    </div>
+                    <div class="market-card">
+                        <h3>Finance Flow</h3>
+                        
+                       
+                        <canvas id="financeChart"></canvas> <!-- Canvas pour le graphique -->
+                        <div class="chart-placeholder"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Orders -->
+            <section class="orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product</th>
+                        <th>Date</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>#968659684</td>
+                        <td>Solar Projecteur Energie Solaire 300W</td>
+                        <td>March 30, 2025</td>
+                        <td>1199.00 DHS</td>
+                        <td class="delivered">Delivered</td>
+                    </tr>
+                    <tr>
+                        <td>#968659684</td>
+                        <td>CRAFTSMAN Air Compressor, 6 Gallon</td>
+                        <td>Feb 01, 2023</td>
+                        <td>1690.00 DHS</td>
+                        <td class="canceled">Canceled</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
